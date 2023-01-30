@@ -1,0 +1,3 @@
+3db64cbc6f1183c28b1e58baa8c45b2c
+
+chave api openweather.
