@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="pt-br">
+    <meta charset="UTF-08">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Ubuntu:ital@0;1&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="/style.css">
 
     <title>Clima</title>
@@ -18,24 +17,23 @@
     <header class="header">
 
     <div class=" header_city-search-bar">
-        <input class="header_input" type="text" placeholder="Temperatura de qual cidade " name="text" id="Itext">
+        <input class="header_input" type="text" placeholder="Temperatura de qual cidade " name="text" id="city-search-input">
         <button class="header_button">
-            <img class="header_button-ico" src="./assert/search-icon.png" alt="icone de uma lupa">
+            <img class="header_button-ico" id="city-search-button" src="./assert/search-icon.png" alt="icone de uma lupa">
         </button>
     </div>
 
-    <div class="header_current-date"> hoje, 30 janeiro de 2023</div>
-    <div class="header_city-name"> Jaboatão dos Guararapes</div>
+    <div class="header_current-date" id="current-date">...</div>
+    <div class="header_city-name" id="city-name">...</div>
 
 </header >
 
 <section class="current-temperature">
-
-    <img class="current-temperature_weather-icon" src="./assert/04d.png" alt="">
-    <div class="current-temperature_description">muito sol</div>
-    <div class="current-temperature_info-label">Temperatura Atua </div>
-    <div class="current-temperature_current-temperature">28</div>
-    
+    <img class="current-temperature_weather-icon" src="./assert/loading-icon.svg" 
+          aria-hidden="true" alt="Icone que ilustra a temperatura atual" id="weather-icon">
+    <div class="current-temperature_description" id="weather-description">...</div>
+    <div class="current-temperature_info-label">Temperatura Atual </div>
+    <div class="current-temperature_current-temperature" id="current-temperature">...</div>
 </section>
 
 <div class="bottom-container">
@@ -43,17 +41,17 @@
 
         <div class="temperature-details_item">
             <div class="temperature-details_label">Vento</div>
-            <div class="temperature-details_value">17km</div>
+            <div class="temperature-details_value" id="wind-speed">...</div>
         </div>
 
         <div class="temperature-details_item">
-            <div class="temperature-details_label">Sensaçao</div>
-            <div class="temperature-details_value">25</div>
+            <div class="temperature-details_label">Sensação</div>
+            <div class="temperature-details_value" id="feels-like-temperature">...</div>
         </div>
 
         <div class="temperature-details_item">
             <div class="temperature-details_label">Umidade</div>
-            <div class="temperature-details_value">19</div>
+            <div class="temperature-details_value " id="current-humidity">...</div>
         </div>
 
     </section>
@@ -61,18 +59,18 @@
     <section class="sunset-sunrise">
 
        <div class="sunset-sunrise_item">
-        <img class="sunset-sunrise_icon" src="./assert/sunrise.png" alt="Nascer do sol">
-        <div class="sunset-sunrise_value">5:00</div>
+         <img class="sunset-sunrise_icon" src="./assert/sunrise.png" alt="Nascer do sol">
+         <div class="sunset-sunrise_value" id="sunrise-time">...</div>
        </div> 
        <div class="sunset-sunrise_item">
-        <img class="sunset-sunrise_icon" src="./assert/sunset.png" alt="Por do Sol">
-        <div class="sunset-sunrise_value">17:30</div>
+         <img class="sunset-sunrise_icon" src="./assert/sunset.png" alt="Por do Sol">
+         <div class="sunset-sunrise_value" id="sunset-time">...</div>
 
        </div>
 
     </section>
 </div>
-
+      <script src="./app.js"></script>
 </body>
 
 </html>
